@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
-#include "ppeureka/http_status.h"
+#include "testeureka/config.h"
+#include "testeureka/http_status.h"
 #include <stdexcept>
 
 
-namespace ppeureka {
+namespace testeureka {
 
     class Error: public std::exception 
     {
@@ -21,7 +21,7 @@ namespace ppeureka {
         : m_message(std::move(message))
         {}
 
-        virtual const char *what() const PPEUREKA_NOEXCEPT override { return m_message.c_str(); }
+        virtual const char *what() const testeureka_NOEXCEPT override { return m_message.c_str(); }
 
     protected:
         std::string m_message;
@@ -47,7 +47,7 @@ namespace ppeureka {
     public:
         OperationAborted() = default;
 
-        virtual const char *what() const PPEUREKA_NOEXCEPT override { return "Operation aborted"; }
+        virtual const char *what() const testeureka_NOEXCEPT override { return "Operation aborted"; }
     };
 
     class BadStatus: public Error
@@ -59,10 +59,10 @@ namespace ppeureka {
         , m_status(std::move(status))
         {}
 
-        int code() const PPEUREKA_NOEXCEPT{ return m_status.code(); }
+        int code() const testeureka_NOEXCEPT{ return m_status.code(); }
 
-        const http::Status& status() const PPEUREKA_NOEXCEPT{ return m_status; }
-        const std::string& message() const PPEUREKA_NOEXCEPT{ return m_message; }
+        const http::Status& status() const testeureka_NOEXCEPT{ return m_status; }
+        const std::string& message() const testeureka_NOEXCEPT{ return m_message; }
 
     protected:
         http::Status m_status;

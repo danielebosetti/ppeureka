@@ -10,7 +10,7 @@
 #include <cstring>
 
 
-namespace ppeureka { namespace http { namespace impl {
+namespace testeureka { namespace http { namespace impl {
     
     inline uint64_t uint64_headerValue(const char *v)
     {

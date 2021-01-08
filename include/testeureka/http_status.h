@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
+#include "testeureka/config.h"
 #include <string>
 
 
-namespace ppeureka { namespace http {
+namespace testeureka { namespace http {
 
     enum HttpCode
     {
@@ -31,7 +31,7 @@ namespace ppeureka { namespace http {
     class Status
     {
     public:
-        explicit Status(int code = 0) PPEUREKA_NOEXCEPT
+        explicit Status(int code = 0) testeureka_NOEXCEPT
         : m_code(code)
         {}
 
@@ -41,10 +41,10 @@ namespace ppeureka { namespace http {
         {}
 
         // Returns true if code() is 2xx (i.e. success) and false otherwise
-        bool success() const PPEUREKA_NOEXCEPT{ return 2 == m_code / 100; }
+        bool success() const testeureka_NOEXCEPT{ return 2 == m_code / 100; }
 
-        int code() const PPEUREKA_NOEXCEPT{ return m_code; }
-        const std::string& message() const PPEUREKA_NOEXCEPT{ return m_message; }
+        int code() const testeureka_NOEXCEPT{ return m_code; }
+        const std::string& message() const testeureka_NOEXCEPT{ return m_message; }
 
     private:
         int m_code;

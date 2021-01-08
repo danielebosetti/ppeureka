@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
+#include "testeureka/config.h"
 #include <stdint.h>
 #include <chrono>
 #include <unordered_map>
 #include <string>
 
-namespace ppeureka {
+namespace testeureka {
 
     using ResponseHeaders = std::unordered_map<std::string, std::string>;
     

@@ -4,7 +4,7 @@
 //  Boost Software License, Version 1.0. (See accompanying file
 //  LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-#include "ppeureka/helpers.h"
+#include "testeureka/helpers.h"
 #include "s11n.h"
 
 extern "C" {
@@ -13,7 +13,7 @@ extern "C" {
 }
 
 
-namespace ppeureka { namespace helpers {
+namespace testeureka { namespace helpers {
 
     namespace {
         inline bool is_char_unsafe(char c)

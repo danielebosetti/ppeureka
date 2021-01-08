@@ -5,16 +5,16 @@
 //  LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "ppeureka/eureka_agent.h"
+#include "testeureka/eureka_agent.h"
 #include <time.h>
 #include <thread>
 #include <random>
 #include <algorithm>
-#include "ppeureka/helpers.h"
+#include "testeureka/helpers.h"
 
 namespace {
-    using namespace ppeureka;
-    using namespace ppeureka::agent;
+    using namespace testeureka;
+    using namespace testeureka::agent;
 
     enum {
         DO_THREAD_COUNT = 4,
@@ -52,14 +52,14 @@ namespace {
         {
             ep += ":";
             ep += std::to_string(ins->securePort->port);
-            return ppeureka::helpers::ensureScheme(ep, "https");
+            return testeureka::helpers::ensureScheme(ep, "https");
         }
         else
         {
             // force default http port
         }
         
-        return ppeureka::helpers::ensureScheme(ep);
+        return testeureka::helpers::ensureScheme(ep);
     }
 
     inline int64_t GetColdDown(std::size_t errStep)
@@ -83,9 +83,9 @@ namespace {
     }
 }
 
-namespace ppeureka { namespace agent {
+namespace testeureka { namespace agent {
 
-    using DeferRun = ppeureka::helpers::DeferRun;
+    using DeferRun = testeureka::helpers::DeferRun;
 
 
     EurekaAgent::EurekaAgent(EurekaConnect &conn)
@@ -570,8 +570,8 @@ namespace ppeureka { namespace agent {
                     hasAdd = true;
                     auto chkIns = std::make_shared<CheckInsData>();
                     chkIns->ins = insQ;
-                    chkIns->cli.reset(ppeureka::http::impl::create_client_pool());
-                    ppeureka::http::impl::TlsConfig defaultTls;
+                    chkIns->cli.reset(testeureka::http::impl::create_client_pool());
+                    testeureka::http::impl::TlsConfig defaultTls;
                     chkIns->cli->start(getEndpoint(insQ), defaultTls);
 
                     innerApp->app.inses.emplace(insQ->instanceId, chkIns);

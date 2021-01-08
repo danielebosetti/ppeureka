@@ -6,16 +6,16 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
-#include "ppeureka/error.h"
-#include "ppeureka/types.h"
-#include "ppeureka/http_status.h"
-#include "ppeureka/response.h"
-#include "ppeureka/http_client.h"
-#include "ppeureka/helpers.h"
+#include "testeureka/config.h"
+#include "testeureka/error.h"
+#include "testeureka/types.h"
+#include "testeureka/http_status.h"
+#include "testeureka/response.h"
+#include "testeureka/http_client.h"
+#include "testeureka/helpers.h"
 
 
-namespace ppeureka { namespace agent {
+namespace testeureka { namespace agent {
 
     using TlsConfig = http::impl::TlsConfig;
     using GetResponse = http::impl::Client::GetResponse;
@@ -33,7 +33,7 @@ namespace ppeureka { namespace agent {
 
     class EurekaConnect
     {
-        using HttpMethod = ppeureka::http::impl::HttpMethod;
+        using HttpMethod = testeureka::http::impl::HttpMethod;
     public:
         EurekaConnect() = default;
 
@@ -47,8 +47,8 @@ namespace ppeureka { namespace agent {
         void setRetryFunction(RetryFunction f) { m_retryFunc = std::move(f); };
 
         // Exception:
-        //    ppeureka::ParamError when parameter error.
-        //    ppeureka::Error when others.
+        //    testeureka::ParamError when parameter error.
+        //    testeureka::Error when others.
         void start();
         // set stop flag, and wait all request end.
         void stop();
@@ -62,12 +62,12 @@ namespace ppeureka { namespace agent {
         // concurrent request parallel.
         // All net request may be Exception.
         // Exception:
-        //    ppeureka::OperationAborted when request cancelled.
-        //    ppeureka::ParamError when parameter error.
-        //    ppeureka::NetError when net error.
-        //    ppeureka::BadStatus when http code not match.
-        //    ppeureka::FormatError when json parse fail.
-        //    ppeureka::Error when others.
+        //    testeureka::OperationAborted when request cancelled.
+        //    testeureka::ParamError when parameter error.
+        //    testeureka::NetError when net error.
+        //    testeureka::BadStatus when http code not match.
+        //    testeureka::FormatError when json parse fail.
+        //    testeureka::Error when others.
 
         InstanceInfoPtrDeque queryInsAll();
         InstanceInfoPtrDeque queryInsByAppId(const std::string &appId);

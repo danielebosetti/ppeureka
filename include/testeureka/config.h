@@ -16,7 +16,7 @@
 #endif
 
 #if ! defined PPCONSUL_NO_CXX11_NOEXCEPT
-    #define PPEUREKA_NOEXCEPT noexcept
+    #define testeureka_NOEXCEPT noexcept
 #else
-    #define PPEUREKA_NOEXCEPT
+    #define testeureka_NOEXCEPT
 #endif

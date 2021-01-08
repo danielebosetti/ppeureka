@@ -4,7 +4,7 @@
 #  Boost Software License, Version 1.0. (See accompanying file
 #  LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-project(ppeureka)
+project(testeureka)
 
 set(HEADERS
     config.h
@@ -14,7 +14,7 @@ set(HEADERS
     helpers.h
     http_client.h
     http_status.h
-    ppeureka.h
+    testeureka.h
     response.h
     types.h
 )
@@ -77,8 +77,8 @@ source_group(${PROJECT_NAME} FILES ${SOURCES})
 source_group(libb64 FILES ${LIBB64_SOURCES})
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
-    VERSION ${Ppeureka_VERSION}
-    SOVERSION ${Ppeureka_VERSION}
+    VERSION ${testeureka_VERSION}
+    SOVERSION ${testeureka_VERSION}
     FOLDER ${PROJECT_NAME}
 )
 

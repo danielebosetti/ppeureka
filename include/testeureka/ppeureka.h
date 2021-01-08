@@ -8,7 +8,7 @@
 
 // Meta header which includes all Ppconsul headers needed to the library user
 
-#include "ppeureka/config.h"
+#include "testeureka/config.h"
 
-#include "ppeureka/eureka_connect.h"
-#include "ppeureka/eureka_agent.h"
+#include "testeureka/eureka_connect.h"
+#include "testeureka/eureka_agent.h"

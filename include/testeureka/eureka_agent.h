@@ -6,22 +6,22 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
-#include "ppeureka/error.h"
-#include "ppeureka/types.h"
-#include "ppeureka/http_status.h"
-#include "ppeureka/response.h"
-#include "ppeureka/http_client.h"
-#include "ppeureka/helpers.h"
-#include "ppeureka/eureka_connect.h"
-#include "ppeureka/sync_list.h"
+#include "testeureka/config.h"
+#include "testeureka/error.h"
+#include "testeureka/types.h"
+#include "testeureka/http_status.h"
+#include "testeureka/response.h"
+#include "testeureka/http_client.h"
+#include "testeureka/helpers.h"
+#include "testeureka/eureka_connect.h"
+#include "testeureka/sync_list.h"
 #include <random>
 
 
-namespace ppeureka { namespace agent {
+namespace testeureka { namespace agent {
 
-    using HttpClientPtr = std::shared_ptr<ppeureka::http::impl::Client>;
-    using HttpMethod = ppeureka::http::impl::HttpMethod;
+    using HttpClientPtr = std::shared_ptr<testeureka::http::impl::Client>;
+    using HttpMethod = testeureka::http::impl::HttpMethod;
     using GetResponse = http::impl::Client::GetResponse;
 
     // 

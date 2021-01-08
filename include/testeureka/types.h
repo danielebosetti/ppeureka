@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
+#include "testeureka/config.h"
 #include <string>
 #include <vector>
 #include <map>
@@ -21,7 +21,7 @@
 #include <atomic>
 
 
-namespace ppeureka {
+namespace testeureka {
 
     using Metadata = std::map<std::string, std::string>;
     using MetadataPtr = std::shared_ptr<Metadata>;

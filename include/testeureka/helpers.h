@@ -6,14 +6,14 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
-#include "ppeureka/error.h"
+#include "testeureka/config.h"
+#include "testeureka/error.h"
 #include <cstdio>
 #include <string>
 #include <functional>
 
 
-namespace ppeureka { namespace helpers {
+namespace testeureka { namespace helpers {
 
     template<class... T>
     std::string format(const char *fmt, const T&...t)

@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "ppeureka/config.h"
+#include "testeureka/config.h"
 #include <list>
 #include <mutex>
 #include <thread>

@@ -4,8 +4,8 @@
 //  Boost Software License, Version 1.0. (See accompanying file
 //  LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
-#include "ppeureka/config.h"
-#include "ppeureka/error.h"
+#include "testeureka/config.h"
+#include "testeureka/error.h"
 #include <json11.hpp>
 #include <vector>
 #include <chrono>
@@ -16,7 +16,7 @@
 #include <deque>
 
 
-namespace ppeureka { namespace s11n {
+namespace testeureka { namespace s11n {
 
     using json11::Json;
 

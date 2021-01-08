@@ -6,13 +6,13 @@
 
 #pragma once
 
-#include "ppeureka/http_status.h"
-#include "ppeureka/response.h"
+#include "testeureka/http_status.h"
+#include "testeureka/response.h"
 #include <tuple>
 #include <string>
 
 
-namespace ppeureka { namespace http { namespace impl {
+namespace testeureka { namespace http { namespace impl {
 
     enum HttpMethod
     {
@@ -59,10 +59,10 @@ namespace ppeureka { namespace http { namespace impl {
         //   if not pool, concurrent requests will sequential.
         // Returns {status, headers, body}
         // Exception:
-        //    ppeureka::OperationAborted when request cancelled.
-        //    ppeureka::ParamError when parameter error.
-        //    ppeureka::NetError when net error.
-        //    ppeureka::Error when others.
+        //    testeureka::OperationAborted when request cancelled.
+        //    testeureka::ParamError when parameter error.
+        //    testeureka::NetError when net error.
+        //    testeureka::Error when others.
         virtual GetResponse request(HttpMethod method, const std::string& path, const std::string& query, const std::string *data = nullptr) = 0;
 
         // stop only set stop flag, not sync stop request

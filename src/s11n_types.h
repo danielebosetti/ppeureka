@@ -5,11 +5,11 @@
 //  LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "ppeureka/types.h"
+#include "testeureka/types.h"
 #include "s11n.h"
 
 
-namespace ppeureka {
+namespace testeureka {
 
     inline void load(const s11n::Json& src, Port& dst)
     {

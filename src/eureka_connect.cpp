@@ -5,16 +5,16 @@
 //  LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
 
 
-#include "ppeureka/eureka_connect.h"
+#include "testeureka/eureka_connect.h"
 #include "s11n_types.h"
 #include "all_clients.h"
-#include "ppeureka/helpers.h"
+#include "testeureka/helpers.h"
 #include <time.h>
 #include <thread>
 
 namespace {
-    using namespace ppeureka;
-    using namespace ppeureka::agent;
+    using namespace testeureka;
+    using namespace testeureka::agent;
 
     inline InstanceInfoPtrDeque toAppsInstances(const GetResponse &resp)
     {
@@ -76,7 +76,7 @@ namespace {
     }
 }
 
-namespace ppeureka { namespace agent {
+namespace testeureka { namespace agent {
     using s11n::load;
     using namespace http::impl;
 
@@ -347,14 +347,14 @@ namespace ppeureka { namespace agent {
 
 
 
-namespace ppeureka { namespace http { namespace impl {
+namespace testeureka { namespace http { namespace impl {
     Client *create_client()
     {
-        return new ppeureka::curl::HttpClient();
+        return new testeureka::curl::HttpClient();
     }
 
     Client *create_client_pool(std::size_t defaultConnCount, std::size_t maxConnCount)
     {
-        return new ppeureka::curl::HttpClientPool(defaultConnCount, maxConnCount);
+        return new testeureka::curl::HttpClientPool(defaultConnCount, maxConnCount);
     }
 }}}
